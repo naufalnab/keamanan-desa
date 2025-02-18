@@ -1,10 +1,10 @@
 {
-    "name": "PWA Login",
-    "short_name": "PWA Login",
+    "name": "Keamanan Desa",
+    "short_name": "KD",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#007bff",
+    "background_color": "#0a192f",
+    "theme_color": "#ff4b2b",
     "icons": [
         {
             "src": "icon.png",
