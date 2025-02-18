@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelaporan Kejadian</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🛡️ Laporkan Kejadian</h2>
+        <select id="reportType">
+            <option value="kebakaran">🔥 Kebakaran</option>
+            <option value="pencurian">🔒 Pencurian</option>
+            <option value="kekerasan">⚠️ Kekerasan</option>
+        </select>
+        <textarea id="description" placeholder="Jelaskan kejadian..."></textarea>
+        <input type="file" id="mediaUpload" accept="image/*,video/*">
+        <button onclick="getLocation()">📍 Tambahkan Lokasi</button>
+        <p id="location"></p>
+        <button onclick="submitReport()">Kirim Laporan</button>
+    </div>
+    <script src="../js/report.js"></script>
+</body>
+</html>
