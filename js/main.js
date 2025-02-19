@@ -26,15 +26,17 @@ function register() {
 
 // Login User
 function login() {
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    if (localStorage.getItem(username) === password) {
-        alert('Login successful!');
+    if (username === "admin" && password === "1234") {
+        alert("Login berhasil!");
+        window.location.href = "pages/report.html"; 
     } else {
-        alert('Invalid credentials');
+        alert("Username atau password salah!");
     }
 }
+
 
 // Register Service Worker for PWA
 if ('serviceWorker' in navigator) {

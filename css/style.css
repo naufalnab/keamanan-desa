@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
     background: #1b3a4b; /* Warna biru gelap untuk kesan keamanan */
     overflow: hidden;
 }
@@ -40,6 +40,7 @@ body {
 .container {
     width: 320px;
     padding: 20px;
+    height: 80vh;
     background: rgba(255, 255, 255, 0.15); /* Efek glass */
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -54,10 +55,6 @@ h2 {
     color: #d1f7c4; /* Hijau muda untuk kesan positif */
     font-size: 24px;
     margin-bottom: 15px;
-}
-
-h2::before {
-    content: "🛡️ ";
 }
 
 /* Input Fields */
@@ -123,7 +120,124 @@ a:hover {
     }
 }
 
-/* Menyembunyikan Form */
 .hidden {
     display: none;
+}
+
+.report-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.report-btn {
+    background-color: #1b3a4b;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(50% - 5px); 
+}
+
+.report-btn span {
+    display: block;
+    font-size: 13px;
+}
+
+.report-btn img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.report-btn:hover {
+    background-color: #0f2a36;
+}
+
+/* Styling untuk textarea dan tombol lainnya tetap sama */
+textarea, input[type="file"], button {
+    width: 100%;
+    padding: 12px;
+    margin: 0px 0px;
+    border: 1px solid rgba(209, 247, 196, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* ... Existing CSS ... */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#reportForm {
+    display: none;
+}
+
+#panicButton {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #ff4d4d, #cc0000); 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.7);
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+#panicButton:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff6666, #e60000); 
+    box-shadow: 0 0 30px rgba(255, 102, 102, 0.9);
 }
