@@ -1,69 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelaporan Kejadian</title>
+    <title>Monitoring Kejadian - Admin</title>
     <link rel="stylesheet" href="/keamanan-desa/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .report-list {
+            margin-top: 20px;
+        }
+
+        .report-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .severity-low {
+            color: green;
+            font-weight: bold;
+        }
+
+        .severity-medium {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .severity-high {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="title">Laporan Kejadian</h1>
-    
     <div class="container">
-        <div id="openPopup" class="report-options">
-            <button class="report-btn" id="pencurian" onclick="showReportForm('pencurian')">
-                <span>🔒 Pencurian</span>
-            </button>
-            <button class="report-btn" id="kebakaran" onclick="showReportForm('kebakaran')">
-                <span>🔥 Kebakaran</span>
-            </button>
-            <button class="report-btn" id="kekerasan" onclick="showReportForm('kekerasan')">
-                <span>⚠️ Kekerasan</span>
-            </button>
-            <button class="report-btn" id="banjir" onclick="showReportForm('banjir')">
-                <span>🌊 Banjir</span>
-            </button>
-            <button class="report-btn" id="badai" onclick="showReportForm('badai')">
-                <span>🌪️ Badai</span>
-            </button>
-            <button class="report-btn" id="petir" onclick="showReportForm('petir')">
-                <span>⚡ Petir</span>
-            </button>
+        <h1 class="title">Monitoring Kejadian</h1>
+        <div id="map"></div>
+
+        <h2>Riwayat Laporan</h2>
+        <div class="report-list" id="reportList">
         </div>
     </div>
 
-    <div id="userPage" class="hidden">
-        <h2 class="user-title">Profil Pengguna</h2>
-        <div class="user-info">
-            <p><strong>Nama:</strong> <span id="userName">John Doe</span></p>
-            <p><strong>Alamat:</strong> <span id="userAddress">Jl. Contoh No. 123</span></p>
-            <p><strong>Kontak:</strong> <span id="userContact">08123456789</span></p>
-        </div>
-        <button id="logoutButton" class="logout-btn">Keluar</button>
-    </div>
-
-    <div id="reportPopup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <form id="reportForm">
-                <textarea id="description" placeholder="Jelaskan kejadian..."></textarea>
-                <input type="file" id="mediaUpload" accept="image/*,video/*">
-                <p id="location"></p>
-                <button type="button" onclick="submitReport()">Kirim Laporan</button>
-            </form>
-        </div>
-    </div>
-
-    <br />
-    <button id="panicButton" onclick="triggerPanic()">🚨</button>
-    <div class="bottom-nav">
-        <button id="homeNav" class="nav-item"><i class="fas fa-home"></i></button>
-        <button id="monitoringNav" class="nav-item"><i class="fas fa-chart-line"></i></button>
-        <button id="userNav" class="nav-item"><i class="fas fa-user"></i></button>
-    </div>
-    <script src="/keamanan-desa/assets/js/report.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/keamanan-desa/assets/js/monitoring.js"></script>
 </body>
-
 </html>
