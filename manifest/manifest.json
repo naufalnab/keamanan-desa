@@ -1,11 +1,11 @@
 {
     "name": "Keamanan Desa",
-    "short_name": "Keamanan",
+    "short_name": "KD",
     "theme_color": "#1b3a4b",
     "background_color": "#0f2a36",
     "icons": [
         {
-            "src": "../assets/logo.png",
+            "src": "https://raw.githubusercontent.com/naufalnab/keamanan-desa/refs/heads/main/assets/logo.png",
             "sizes": "192x192",
             "type": "image/png"
         }
