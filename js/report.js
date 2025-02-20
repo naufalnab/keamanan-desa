@@ -6,36 +6,30 @@ const openPopupBtn = document.getElementById("openPopup");
 
 function showReportForm(type) {
     selectedReportType = type;
-    reportForm.style.display = "block"; // Show form inside the popup
+    reportForm.style.display = "block";
 }
 
-// Function to open the popup
 function openPopup() {
     popup.style.display = "block";
 }
 
-// Function to close the popup
 function closePopupFunction() {
     popup.style.display = "none";
-    // Reset form when closing popup
     document.getElementById("description").value = "";
     document.getElementById("mediaUpload").value = "";
     document.getElementById("location").innerText = "";
     reportForm.style.display = "none";
 }
 
-// Event listeners for opening and closing the popup
 openPopupBtn.onclick = openPopup;
 closePopup.onclick = closePopupFunction;
 
-// Close if clicked outside the popup
 window.onclick = function(event) {
     if (event.target == popup) {
         closePopupFunction();
     }
 };
 
-// Existing functions remain unchanged
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {

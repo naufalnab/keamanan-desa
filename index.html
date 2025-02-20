@@ -12,18 +12,15 @@
 
     <div class="container">
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-        <!-- <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p> -->
-    </div>
 
-    <div class="container hidden" id="register">
-        <h2>Register</h2>
-        <input type="text" id="regUsername" placeholder="Username">
-        <input type="password" id="regPassword" placeholder="Password">
-        <button onclick="register()">Register</button>
-        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <div class="button-group">
+            <button onclick="login()">Login</button>
+        </div>
     </div>
 
     <script src="js/main.js"></script>

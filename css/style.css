@@ -36,18 +36,35 @@ body {
     filter: blur(5px);
 }
 
-/* Container dengan Efek Glassmorphism */
 .container {
     width: 320px;
     padding: 20px;
-    height: 80vh;
-    background: rgba(255, 255, 255, 0.15); /* Efek glass */
+    height: auto;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
     backdrop-filter: blur(10px);
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 30px; 
+}
+
+.button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* Judul dengan ikon shield */
@@ -61,7 +78,6 @@ h2 {
 input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
     border: 1px solid rgba(209, 247, 196, 0.3);
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -74,11 +90,10 @@ input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Tombol */
 button {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(45deg, #28a745, #218838); /* Hijau untuk kepercayaan */
+    background: linear-gradient(45deg, #28a745, #218838);
     border: none;
     color: white;
     font-weight: bold;
@@ -92,7 +107,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Link */
 p {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 10px;
