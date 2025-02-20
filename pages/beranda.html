@@ -7,7 +7,8 @@
     <title>Pelaporan Kejadian</title>
     <link rel="stylesheet" href="/keamanan-desa/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head><body>
+</head>
+<body>
     <h1 class="title">Laporan Kejadian</h1>
     
     <div class="container">
@@ -31,29 +32,30 @@
                 <span>⚡ Petir</span>
             </button>
         </div>
+    </div>
 
-        <div id="userPage" class="hidden">
-            <h2 class="user-title">Profil Pengguna</h2>
-            <div class="user-info">
-                <p><strong>Nama:</strong> <span id="userName">John Doe</span></p>
-                <p><strong>Alamat:</strong> <span id="userAddress">Jl. Contoh No. 123</span></p>
-                <p><strong>Kontak:</strong> <span id="userContact">08123456789</span></p>
-            </div>
-            <button id="logoutButton" class="logout-btn">Keluar</button>
+    <div id="userPage" class="hidden">
+        <h2 class="user-title">Profil Pengguna</h2>
+        <div class="user-info">
+            <p><strong>Nama:</strong> <span id="userName">John Doe</span></p>
+            <p><strong>Alamat:</strong> <span id="userAddress">Jl. Contoh No. 123</span></p>
+            <p><strong>Kontak:</strong> <span id="userContact">08123456789</span></p>
         </div>
+        <button id="logoutButton" class="logout-btn">Keluar</button>
+    </div>
 
-        <div id="reportPopup" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <form id="reportForm">
-                    <textarea id="description" placeholder="Jelaskan kejadian..."></textarea>
-                    <input type="file" id="mediaUpload" accept="image/*,video/*">
-                    <p id="location"></p>
-                    <button type="button" onclick="submitReport()">Kirim Laporan</button>
-                </form>
-            </div>
+    <div id="reportPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <form id="reportForm">
+                <textarea id="description" placeholder="Jelaskan kejadian..."></textarea>
+                <input type="file" id="mediaUpload" accept="image/*,video/*">
+                <p id="location"></p>
+                <button type="button" onclick="submitReport()">Kirim Laporan</button>
+            </form>
         </div>
     </div>
+
     <br />
     <button id="panicButton" onclick="triggerPanic()">🚨</button>
     <div class="bottom-nav">
@@ -61,7 +63,7 @@
         <button id="monitoringNav" class="nav-item"><i class="fas fa-chart-line"></i></button>
         <button id="userNav" class="nav-item"><i class="fas fa-user"></i></button>
     </div>
-    <script src="../js/report.js"></script>
+    <script src="/keamanan-desa/assets/js/report.js"></script>
 </body>
 
 </html>

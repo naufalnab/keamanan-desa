@@ -5,7 +5,7 @@
     "background_color": "#0f2a36",
     "icons": [
         {
-            "src": "https://raw.githubusercontent.com/naufalnab/keamanan-desa/refs/heads/main/assets/logo.png",
+            "src": "https://raw.githubusercontent.com/naufalnab/keamanan-desa/refs/heads/main/assets/images/logo.png",
             "sizes": "192x192",
             "type": "image/png"
         }

@@ -32,7 +32,7 @@ function login() {
 
     if (username === "admin" && password === "1234") {
         alert("Login berhasil!");
-        window.location.href = "pages/report.html"; 
+        window.location.href = "pages/beranda.html"; 
     } else {
         alert("Username atau password salah!");
     }

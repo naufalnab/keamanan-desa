@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoutButton) {
         logoutButton.addEventListener("click", function () {
             alert("Anda telah logout!");
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         });
     }
 
