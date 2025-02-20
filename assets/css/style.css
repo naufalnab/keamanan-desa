@@ -9,11 +9,61 @@
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 85vh;
-    background: #1b3a4b; /* Warna biru gelap untuk kesan keamanan */
+    justify-content: center;
+    height: 100vh;
+    background: #1b3a4b;
     overflow: hidden;
+}
+
+/* Laporan Kejadian di tengah atas */
+.title {
+    color: #d1f7c4;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px; /* Jarak dari container */
+}
+
+/* Container tetap di tengah */
+.container {
+    width: 90%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+/* Panic Button di tengah bawah */
+#panicButton {
+    display: block;
+    margin-top: 20px; /* Jarak dari container */
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #ff4d4d, #cc0000); 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.7);
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+#panicButton:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff6666, #e60000); 
+    box-shadow: 0 0 30px rgba(255, 102, 102, 0.9);
 }
 
 /* Background Animasi */
@@ -254,4 +304,71 @@ textarea, input[type="file"], button {
     transform: scale(1.1);
     background: linear-gradient(45deg, #ff6666, #e60000); 
     box-shadow: 0 0 30px rgba(255, 102, 102, 0.9);
+}
+
+.user-title {
+    text-align: center;
+    color: #d1f7c4;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+}
+
+.user-info p {
+    margin: 10px 0;
+}
+
+.logout-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #ff4d4d, #cc0000);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(45deg, #ff6666, #e60000);
+    transform: scale(1.05);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    color: #d1f7c4; /* Warna efek hover */
 }

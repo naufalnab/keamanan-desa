@@ -1,3 +1,4 @@
+
 // Show Register Form
 function showRegister() {
     document.querySelector('.container').classList.add('hidden');

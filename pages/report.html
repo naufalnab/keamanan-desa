@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelaporan Kejadian</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/keamanan-desa/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head><body>
+    <h1 class="title">Laporan Kejadian</h1>
+    
     <div class="container">
-        <h2>Laporkan Kejadian</h2>
         <div id="openPopup" class="report-options">
             <button class="report-btn" id="pencurian" onclick="showReportForm('pencurian')">
                 <span>🔒 Pencurian</span>
@@ -29,7 +31,17 @@
                 <span>⚡ Petir</span>
             </button>
         </div>
-        <button id="panicButton" onclick="triggerPanic()">🚨</button>
+
+        <div id="userPage" class="hidden">
+            <h2 class="user-title">Profil Pengguna</h2>
+            <div class="user-info">
+                <p><strong>Nama:</strong> <span id="userName">John Doe</span></p>
+                <p><strong>Alamat:</strong> <span id="userAddress">Jl. Contoh No. 123</span></p>
+                <p><strong>Kontak:</strong> <span id="userContact">08123456789</span></p>
+            </div>
+            <button id="logoutButton" class="logout-btn">Keluar</button>
+        </div>
+
         <div id="reportPopup" class="popup">
             <div class="popup-content">
                 <span class="close">&times;</span>
@@ -42,6 +54,14 @@
             </div>
         </div>
     </div>
+    <br />
+    <button id="panicButton" onclick="triggerPanic()">🚨</button>
+    <div class="bottom-nav">
+        <button id="homeNav" class="nav-item"><i class="fas fa-home"></i></button>
+        <button id="monitoringNav" class="nav-item"><i class="fas fa-chart-line"></i></button>
+        <button id="userNav" class="nav-item"><i class="fas fa-user"></i></button>
+    </div>
     <script src="../js/report.js"></script>
 </body>
+
 </html>
