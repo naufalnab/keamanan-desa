@@ -1,41 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const reports = [
-        { type: "Pencurian", lat: -6.200000, lng: 106.816666, severity: "high", time: "10 Menit yang lalu" },
-        { type: "Kebakaran", lat: -6.210000, lng: 106.826666, severity: "medium", time: "30 Menit yang lalu" },
-        { type: "Banjir", lat: -6.190000, lng: 106.806666, severity: "high", time: "1 Jam yang lalu" },
-        { type: "Kekerasan", lat: -6.185000, lng: 106.816666, severity: "medium", time: "2 Jam yang lalu" },
-        { type: "Petir", lat: -6.195000, lng: 106.826666, severity: "low", time: "3 Jam yang lalu" }
-    ];
 
-    // Inisialisasi Peta
-    var map = L.map("map").setView([-6.200000, 106.816666], 12);
+const reports = [
+    { id: 1, type: "Keamanan", date: "21 Feb 2024", status: "Selesai" },
+    { id: 2, type: "Darurat", date: "15 Feb 2024", status: "Diproses" },
+    { id: 3, type: "Lingkungan", date: "10 Feb 2024", status: "Selesai" }
+];
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: "© OpenStreetMap contributors"
-    }).addTo(map);
-
-    // Tambahkan marker ke peta
-    reports.forEach(report => {
-        let color = report.severity === "high" ? "red" : report.severity === "medium" ? "orange" : "green";
-
-        L.circleMarker([report.lat, report.lng], {
-            color: color,
-            radius: 10,
-            fillOpacity: 0.7
-        })
-        .bindPopup(`<strong>${report.type}</strong><br>${report.time}`)
-        .addTo(map);
+document.addEventListener('DOMContentLoaded', () => {
+    const reportList = document.getElementById('reportList');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.id === 'userNav') {
+                window.location.href = 'user.html';
+            } else if (btn.id === 'homeNav') {
+                window.location.href = 'beranda.html';
+            } else if (btn.id === 'monitoringNav') {
+                // Already on the monitoring page, do nothing
+                return;
+            }
+        });
     });
-
-    // Tampilkan riwayat laporan
-    const reportList = document.getElementById("reportList");
-    reports.forEach(report => {
-        const div = document.createElement("div");
-        div.classList.add("report-item");
-        div.innerHTML = `
-            <span>${report.type} - ${report.time}</span>
-            <span class="severity-${report.severity}">${report.severity.toUpperCase()}</span>
-        `;
-        reportList.appendChild(div);
-    });
+    reportList.innerHTML = reports.map(report => `
+        <div class="report-item">
+            <div class="report-info">
+                <div class="report-type">${report.type}</div>
+                <div class="report-date">${report.date}</div>
+            </div>
+            <span class="report-status ${report.status === 'Selesai' ? 'status-completed' : 'status-pending'}">
+                ${report.status}
+            </span>
+        </div>
+    `).join('');
 });

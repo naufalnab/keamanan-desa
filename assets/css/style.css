@@ -405,21 +405,6 @@ textarea, input[type="file"], button {
     color: #d1f7c4;
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 1rem;
-        padding-bottom: 80px;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    .btn-group {
-        flex-direction: column;
-    }
-}
-
 .nav-item {
     background: none;
     border: none;
@@ -433,4 +418,19 @@ textarea, input[type="file"], button {
 .nav-item:hover {
     transform: scale(1.1);
     color: #d1f7c4; /* Warna efek hover */
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+        padding-bottom: 80px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
 }

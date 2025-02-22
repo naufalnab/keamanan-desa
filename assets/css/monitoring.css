@@ -1,0 +1,129 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1b3a4b;
+    color: white;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.report-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.status-completed {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.status-pending {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+}
+
+.nav-buttons {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    color: #d1f7c4;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    color: #d1f7c4; /* Warna efek hover */
+}
+
+/* Styling for monitoring page */
+
+.header {
+    color: #d1f7c4;
+}
+
+.bottom-nav .nav-btn.active {
+    color: #d1f7c4;
+}
+
+/* Ensure navigation works */
+#userNav {
+    cursor: pointer;
+}
+
+#homeNav {
+    cursor: pointer;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #218838, #28a745);
+    transform: scale(1.05);
+}
