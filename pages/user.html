@@ -1,56 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pengguna</title>
-    <link rel="stylesheet" href="/keamanan-desa/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <h1 class="title">Profil Pengguna</h1>
-    
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="profile-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <h1 class="profile-name" id="userName"></h1>
+        <span class="profile-role" id="userRole"></span>
+    </div>
+
+    <!-- Main Container -->
     <div class="container">
-        <div id="openPopup" class="report-options">
-            <div class="user-info">
-                <p><strong>Nama:</strong> <span id="userName">John Doe</span></p>
-                <p><strong>Alamat:</strong> <span id="userAddress">Jl. Contoh No. 123</span></p>
-                <p><strong>Kontak:</strong> <span id="userContact">08123456789</span></p>
+        <!-- User Info Section -->
+        <div class="section-header">
+            <h2 class="section-title">Informasi Pribadi</h2>
+            <button id="editBtn" class="edit-btn">
+                <i class="fas fa-edit"></i>
+            </button>
+        </div>
+
+        <!-- Info View Mode -->
+        <div id="infoView">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="userAddress"></span>
             </div>
-            <button id="logoutButton" class="logout-btn">Keluar</button>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span id="userPhone"></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span id="userEmail"></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-id-card"></i>
+                <span id="userNIK"></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <span id="userOccupation"></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-calendar"></i>
+                <span>Bergabung: </span>
+                <span id="userJoinDate"></span>
+            </div>
         </div>
+
+        <!-- Edit Form -->
+        <div id="editForm" class="edit-form">
+            <input type="text" id="nameInput" class="form-input" placeholder="Nama">
+            <input type="tel" id="phoneInput" class="form-input" placeholder="Nomor Telepon">
+            <input type="email" id="emailInput" class="form-input" placeholder="Email">
+            
+            <div class="btn-group">
+                <button id="saveBtn" class="btn btn-primary">Simpan</button>
+                <button id="cancelBtn" class="btn btn-danger">Batal</button>
+            </div>
+        </div>
+
+        <!-- Recent Reports Section -->
+        <div class="recent-reports">
+            <h3 class="section-title">Riwayat Laporan</h3>
+            <div id="recentReports">
+                <!-- Reports will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <button id="logoutBtn" class="btn btn-danger" style="width: 100%; margin-top: 2rem;">
+            <i class="fas fa-sign-out-alt"></i> Keluar
+        </button>
     </div>
 
-    <div id="userPage" class="hidden">
-        <h2 class="user-title">Profil Pengguna</h2>
-        <div class="user-info">
-            <p><strong>Nama:</strong> <span id="userName">John Doe</span></p>
-            <p><strong>Alamat:</strong> <span id="userAddress">Jl. Contoh No. 123</span></p>
-            <p><strong>Kontak:</strong> <span id="userContact">08123456789</span></p>
-        </div>
-        <button id="logoutButton" class="logout-btn">Keluar</button>
-    </div>
-
-    <div id="reportPopup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <form id="reportForm">
-                <textarea id="description" placeholder="Jelaskan kejadian..."></textarea>
-                <input type="file" id="mediaUpload" accept="image/*,video/*">
-                <p id="location"></p>
-                <button type="button" onclick="submitReport()">Kirim Laporan</button>
-            </form>
-        </div>
-    </div>
-
-    <br />
+    <!-- Bottom Navigation -->
     <div class="bottom-nav">
-        <button id="homeNav" class="nav-item"><i class="fas fa-home"></i></button>
-        <button id="monitoringNav" class="nav-item"><i class="fas fa-chart-line"></i></button>
-        <button id="userNav" class="nav-item"><i class="fas fa-user"></i></button>
+        <div class="nav-buttons">
+            <button id="homeNav" class="nav-btn">
+                <i class="fas fa-home"></i>
+            </button>
+            <button id="monitoringNav" class="nav-btn">
+                <i class="fas fa-chart-line"></i>
+            </button>
+            <button id="userNav" class="nav-btn">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
     </div>
-    <script src="/keamanan-desa/assets/js/report.js"></script>
-</body>
 
+    <!-- Scripts -->
+    <script src="/assets/js/user.js"></script>
+</body>
 </html>

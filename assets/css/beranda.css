@@ -344,11 +344,11 @@ textarea, input[type="file"], button {
 .user-info {
     background: rgba(255, 255, 255, 0.1);
     padding-inline: 20%;
-    padding-block: 10;
+    padding-block: 1%;
     border-radius: 10px;
     color: white;
     text-align: left;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .user-info p {
@@ -357,7 +357,7 @@ textarea, input[type="file"], button {
 
 .logout-btn {
     display: block;
-    width: 100%;
+    width: 50%;
     padding: 12px;
     margin-top: 15px;
     background: linear-gradient(45deg, #ff4d4d, #cc0000);
@@ -378,46 +378,13 @@ textarea, input[type="file"], button {
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1rem;
-}
-
-.nav-buttons {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
-}
-
-.nav-btn {
-    background: none;
-    border: none;
-    color: white;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.nav-btn:hover, .nav-btn.active {
-    color: #d1f7c4;
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 1rem;
-        padding-bottom: 80px;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    .btn-group {
-        flex-direction: column;
-    }
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-item {
@@ -433,4 +400,203 @@ textarea, input[type="file"], button {
 .nav-item:hover {
     transform: scale(1.1);
     color: #d1f7c4; /* Warna efek hover */
+}
+
+/* Header Styles */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.5s ease;
+}
+
+.welcome-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.stat-item i {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.stat-details {
+    text-align: left;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d1f7c4;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Report Buttons */
+.report-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.report-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.report-btn i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.report-btn span {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.report-btn small {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.report-btn:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Panic Button Section */
+.panic-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.panic-text {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+#panicButton {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff4d4d, #cc0000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#panicButton i {
+    font-size: 3rem;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: #d1f7c4;
+    margin-bottom: 0.5rem;
+}
+
+.location-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.location-text {
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Navigation Improvements */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.nav-label {
+    font-size: 0.8rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .report-options {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    #panicButton {
+        width: 150px;
+        height: 150px;
+    }
 }

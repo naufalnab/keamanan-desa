@@ -124,3 +124,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (btn.id === "userNav" && currentPage === "user.html") btn.classList.add("active");
     });
 });
+
+
+navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (btn.id === 'homeNav') {
+            window.location.href = 'beranda.html';
+        } else if (btn.id === 'monitoringNav') {
+            window.location.href = 'monitoring.html';
+        } else if (btn.id === 'userNav') {
+            window.location.href = 'user.html';
+        }
+    });
+});
