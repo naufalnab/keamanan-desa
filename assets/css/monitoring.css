@@ -7,6 +7,14 @@ body {
     padding-bottom: 80px;
 }
 
+/* Laporan Kejadian di tengah atas */
+.title {
+    color: #d1f7c4;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px; /* Jarak dari container */
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
