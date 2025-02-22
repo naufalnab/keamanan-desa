@@ -1,7 +1,7 @@
 // Dummy user data
 const userData = {
-    name: "Budi Santoso",
-    role: "Warga",
+    name: "Naufal Nabila",
+    role: "Admin",
     address: "Jl. Mawar No. 45, RT 03/RW 02",
     phone: "081234567890",
     email: "budi.santoso@email.com",
