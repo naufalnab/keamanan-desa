@@ -3,9 +3,9 @@ const userData = {
     name: "Naufal Nabila",
     role: "Admin",
     address: "Jl. Mawar No. 45, RT 03/RW 02",
-    phone: "081234567890",
-    email: "budi.santoso@email.com",
-    joinDate: "15 Januari 2024",
+    phone: "082328591004",
+    email: "naufal.nabila.2008@gmail.com",
+    joinDate: "15 Februari 2025",
     nik: "3271046709880001",
     occupation: "Pengusaha",
     recentReports: [
