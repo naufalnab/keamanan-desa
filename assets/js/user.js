@@ -102,7 +102,7 @@ saveBtn.addEventListener('click', () => {
 logoutBtn.addEventListener('click', () => {
     if (confirm('Apakah Anda yakin ingin keluar?')) {
         alert('Anda telah berhasil keluar');
-        window.location.href = '../index.html';
+        window.location.href = '../../../index.html';
     }
 });
 
@@ -123,7 +123,7 @@ navButtons.forEach(btn => {
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     initializeUserData();
-    
+
     // Set active nav button
     const currentPage = window.location.pathname.split('/').pop();
     navButtons.forEach(btn => {

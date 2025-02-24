@@ -1,14 +1,20 @@
 // Dummy users for demo
 const dummyUsers = {
     'admin': {
-        password: '1234',
-        email: 'admin@example.com',
-        role: 'admin'
+        password: 'admin123',
+        email: 'admin@keamanandesa.com',
+        role: 'admin',
+        name: 'Administrator',
+        address: 'Kantor Desa, Jl. Utama No. 1',
+        contact: '081234567890'
     },
-    'warga': {
-        password: '1234',
-        email: 'warga@example.com',
-        role: 'warga'
+    'user': {
+        password: 'user123',
+        email: 'user@keamanandesa.com',
+        role: 'warga',
+        name: 'Pengguna Umum',
+        address: 'Blok A RT 03 / RW 05, Desa Sejahtera',
+        contact: '089876543210'
     }
 };
 
@@ -82,7 +88,10 @@ function register() {
     dummyUsers[username] = {
         password: password,
         email: email,
-        role: 'warga'
+        role: 'warga',
+        name: username,
+        address: 'Alamat belum diatur',
+        contact: 'Kontak belum diatur'
     };
 
     showSuccess('Registrasi berhasil! Silakan login.');
@@ -110,7 +119,10 @@ function login() {
     localStorage.setItem('currentUser', JSON.stringify({
         username: username,
         role: user.role,
-        email: user.email
+        email: user.email,
+        name: user.name,
+        address: user.address,
+        contact: user.contact
     }));
 
     showSuccess('Login berhasil!');
